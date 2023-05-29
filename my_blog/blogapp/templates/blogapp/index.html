@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block title %} Главная страница {% endblock %}
+{% block header %} Главная страница {% endblock %}
+
+{% block content %}
+
+<div class="row">
+<!--        Количество постов на странице: {{posts|length}}-->
+    <div class="col-lg-8 col-md-10 mx-auto">
+        {% for item in posts %}
+        <div class="post-preview">
+                <a href = {% url 'blogapp:post' id=item.id %}>
+                <h2 class="post-title">
+                    {{ item.name }}
+                </h2>
+                </a>
+                <h6 class="post-subtitle">
+                    {{ item.text }}
+                </h6>
+            <p class="post-meta">
+                <a href="#">Мой первый блог.</a>
+                {{ item.create }}
+            <!--{% if item.has_image %}
+                Есть картинка
+                {% else%}
+                Нет картинки
+            {% endif %}
+                {{item.has_image}}
+                {{item.some_method}}-->
+             </p>
+        </div>
+        <hr>
+        {% endfor %}
+        <div class="clearfix">
+            <div class="pagination">
+
+            <span class="step-links">
+                {% if posts.has_previous %}
+                    <a href="?page={{ posts.previous_page_number }}">previous</a>
+                {% endif %}
+
+                <span class="current">
+                    Page {{ posts.number }} of {{ posts.paginator.num_pages }}.
+                </span>
+
+                {% if posts.has_next %}
+                {# <a href="?page={{ posts.next_page_number }}">next</a> #}
+
+
+                    <a class="btn btn-primary float-right"
+                       href="?page={{ posts.next_page_number }}">Предыдущие посты &rarr;</a>
+
+                {% endif %}
+            </span>
+            </div>
+        </div>
+    </div>
+        {% endblock %}
+         </div>
