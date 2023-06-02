@@ -15,13 +15,19 @@ import os
 #BASE_DIR = Path(__file__).resolve().parent.parent
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+from dotenv import load_dotenv
+load_dotenv()
+
+#GCP_PROJECT_ID = os.getenv('DJANGO_SECRET_KEY')
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = ''
+#SECRET_KEY = 'django-insecure-f37d1kn&g8+^vhk*f6!0#9949a$*=*lo5y+u2k_bivwwk-$n=l'
 
-# SECURITY WARNING: don't run with debug turned on in production!
+SECRET_KEY = 'DJANGO_SECRET_KEY'
+#SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
@@ -43,6 +49,8 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
 # django-cleanup должен быть самым последним
     'django_cleanup.apps.CleanupConfig',
+    #'aaa.apps.AaaConfig',
+    'django_extensions',
 ]
 
 MIDDLEWARE = [
@@ -163,3 +171,4 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.SessionAuthentication',
     ]
 }
+
