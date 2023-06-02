@@ -31,7 +31,7 @@ SECRET_KEY = 'django-insecure-1234567890'
 
  - перейти в папку blog с файлом manage.py:
 ```curl 
-cd blog
+cd my_blog
  ```
 
  - сбросить все миграции:
