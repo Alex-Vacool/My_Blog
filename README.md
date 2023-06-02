@@ -26,7 +26,8 @@ pip3 install -r requirements.txt
 ```
  - рядом с requirements.txt создать файл .env c ключом:
 ```curl 
-SECRET_KEY = 'django-insecure-1234567890'
+DJANGO_SECRET_KEY = 'django-insecure-f37d1kn&g8+^vhk*f6!0#9949a$*=*lo5y+u2k_bivwwk-$n=l'
+token = 'ccb8c10a0f65187e910587fb1c6bac37ee6c4efc'
  ```
 
  - перейти в папку blog с файлом manage.py:
