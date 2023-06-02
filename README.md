@@ -15,7 +15,7 @@
 ## Требования к операционной системе
 Тестирование сервиса проводилось на операционной системе Windows 11 c python 3.7</sup>
 
-## Установка веб-сервиса
+## Установка веб-сервиса (Windows)
  - Для установки веб-сервиса необходимо скопировать содержимое репозитория на диск:
 ```curl   
 git clone https://github.com/Alex-Vacool/My_Blog
@@ -35,32 +35,8 @@ token = 'ccb8c10a0f65187e910587fb1c6bac37ee6c4efc'
 cd my_blog
  ```
 
- - сбросить все миграции:
-```curl 
-python manage.py migrate blogapp zero --fake
-```
- - удалить файлы миграции в каталоге migrations:
-```curl 
-0001_initial.py и др. 000...
-```
- - создать файлы миграции командой:
-```curl 
-python manage.py makemigrations
-```
- - сделать миграции в базу командой:
-```curl 
-python manage.py migrate
-```
- - создать суперпользователя:
-```curl 
-python manage.py createsuperuser
-```
-## Пример использования
+## Пример использования (Windows)
 Чтобы протестировать веб-сервис необходимо:
- - загрузить данные в базу:
-```curl 
-python manage.py fill_goods
-```
  - запустить сервер:
 ```curl 
 python manage.py runserver
