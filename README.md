@@ -24,7 +24,7 @@ git clone https://github.com/Alex-Vacool/My_Blog
 ```curl   
 pip3 install -r requirements.txt
 ```
- - в папке my_blog/my_blog/settings.py создать файл .env c ключом:
+ - в папке my_blog/my_blog/settings.py создать файл .env c ключами:
 ```curl 
 DJANGO_SECRET_KEY = 'django-insecure-f37d1kn&g8+^vhk*f6!0#9949a$*=*lo5y+u2k_bivwwk-$n=l'
 token = 'ccb8c10a0f65187e910587fb1c6bac37ee6c4efc'
