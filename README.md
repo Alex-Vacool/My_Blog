@@ -163,15 +163,13 @@ server {
     }
 }
  ```
-
-
-service nginx restart
-
-ВОЗМОЖНЫЕ ОШИБКИ, СИТУАЦИИ
-
-Если имзенения внесли в проект
+ - Перезапустить сервисы gunicorn и nginx 
+```curl 
 service gunicorn restart
-service nginx restart (если нет изменений)
+service nginx restart
+ ```
+
+
 
 
 
