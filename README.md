@@ -109,7 +109,6 @@ gunicorn my_blog.wsgi
 sudo nano /etc/systemd/system/gunicorn.service
  ```
 - текст файла
---------------------------------------
  ```curl 
 [Unit]
 Description=gunicorn daemon
@@ -123,6 +122,12 @@ ExecStart=/home/ubuntu/my_blog/django2/bin/gunicorn --access-logfile - --workers
 
 [Install]
 WantedBy=multi-user.target
+ ```
+- Регистрация и запуск сервиса
+```curl 
+sudo systemctl enable gunicorn
+sudo systemctl start gunicorn
+service gunicorn status - должен быть active
  ```
 
 
