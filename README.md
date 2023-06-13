@@ -92,6 +92,11 @@ python3 -m venv django2
  ```curl 
 source django2/bin/activate
  ```
+ - Установить необходимые пакеты в окружение
+ ```curl 
+pip install -r requirements.txt
+ ```
+
 
 
 
