@@ -82,6 +82,7 @@ Ctrl+X - закрыть
  - Создать python-окружение для проекта
  ```curl 
 python3 -V - текущая версия
+ ```
  ```curl 
 sudo apt install python3-venv
  ```
