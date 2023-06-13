@@ -104,10 +104,10 @@ pip install gunicorn
  ```curl 
 gunicorn my_blog.wsgi 
  ```
-
-- Регистрация gunicorn как сервиса (сеть, сокет)
+- Зарегистрировать gunicorn как сервис (сеть, сокет)
+ ```curl 
 sudo nano /etc/systemd/system/gunicorn.service
-
+ ```
 
 
 
