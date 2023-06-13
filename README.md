@@ -96,8 +96,17 @@ source django2/bin/activate
  ```curl 
 pip install -r requirements.txt
  ```
+ - Установить gunicorn (uwsgi) в текущее окружение
+ ```curl 
+pip install gunicorn
+ ```
+ - Провести тестовый запуск проекта (из папки проекта)
+ ```curl 
+gunicorn my_blog.wsgi 
+ ```
 
-
+- Регистрация gunicorn как сервиса (сеть, сокет)
+sudo nano /etc/systemd/system/gunicorn.service
 
 
 
