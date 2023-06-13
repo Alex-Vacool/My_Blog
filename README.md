@@ -129,12 +129,49 @@ sudo systemctl enable gunicorn
 sudo systemctl start gunicorn
 service gunicorn status - должен быть active
  ```
-- Установка nginx
+- Установить nginx
 ```curl 
 sudo apt install nginx
 service nginx status
  ```
+ - Настроить nginx
+ ```curl 
+cd /etc/nginx/sites-available/
+ ```
+ - Перенаправить запросы на сокет gunicorn
+ ```curl 
+nano default
 
+текст фала
+
+server {
+    listen 80;
+    server_name 192.168.0.98;
+
+    location = /favicon.ico { access_log off; log_not_found off; }
+    location /static/ {
+        root /home/ubuntu/my_blog;
+    }
+
+    location /media/ {
+        root /home/ubuntu/my_blog;
+    }
+
+    location / {
+        include proxy_params;
+        proxy_pass http://unix:/home/ubuntu/my_blog/my_blog.sock;
+    }
+}
+ ```
+
+
+service nginx restart
+
+ВОЗМОЖНЫЕ ОШИБКИ, СИТУАЦИИ
+
+Если имзенения внесли в проект
+service gunicorn restart
+service nginx restart (если нет изменений)
 
 
 
