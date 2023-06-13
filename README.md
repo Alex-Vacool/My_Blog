@@ -86,9 +86,13 @@ python3 -V - текущая версия
  ```curl 
 sudo apt install python3-venv
  ```
-
-python3 -m venv django2 
+ ```curl 
+python3 -m venv django2
+ ```
+ ```curl 
 source django2/bin/activate
+ ```
+
 
 
 
