@@ -108,6 +108,20 @@ gunicorn my_blog.wsgi
  ```curl 
 sudo nano /etc/systemd/system/gunicorn.service
  ```
+- текст файла
+--------------------------------------
+[Unit]
+Description=gunicorn daemon
+After=network.target
 
+[Service]
+User=root
+Group=www-data
+WorkingDirectory=/home/ubuntu/my_blog
+ExecStart=/home/ubuntu/my_blog/django2/bin/gunicorn --access-logfile - --workers 3 --bind unix:/home/ubuntu/my_blog/my_blog.sock my_blog.wsgi
+
+[Install]
+WantedBy=multi-user.target
+-----------------------------------------
 
 
