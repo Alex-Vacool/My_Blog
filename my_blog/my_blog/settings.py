@@ -24,9 +24,8 @@ load_dotenv()
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-#SECRET_KEY = 'django-insecure-f37d1kn&g8+^vhk*f6!0#9949a$*=*lo5y+u2k_bivwwk-$n=l'
-
 SECRET_KEY = 'DJANGO_SECRET_KEY'
+
 #SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -172,3 +171,5 @@ REST_FRAMEWORK = {
     ]
 }
 
+# SECURE_SSL_REDIRECT = True
+# SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
