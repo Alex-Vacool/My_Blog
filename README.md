@@ -129,6 +129,12 @@ sudo systemctl enable gunicorn
 sudo systemctl start gunicorn
 service gunicorn status - должен быть active
  ```
+- Установка nginx
+```curl 
+sudo apt install nginx
+service nginx status
+ ```
+
 
 
 
