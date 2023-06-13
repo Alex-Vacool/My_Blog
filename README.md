@@ -56,11 +56,26 @@ http://127.0.0.1:8000/
  ```curl 
 sudo apt update
  ```
-  ```curl 
+ ```curl 
 sudo apt install vsftpd
  ```
-   ```curl 
+ ```curl 
 service vsftpd status
  ```
- 
+ - Включить возможность записи по ftp
+ - Установить nano 
+ ```curl 
+sudo apt install nano
+ ```
+ - Отредактировать файл с настройками
+ ```curl 
+nano /etc/vsftpd.conf
+ ```
+  ```curl 
+write_enable=YES
+Chtl+O - сохранить
+Ctrl+X - закрыть
+ ```
+
+
 
