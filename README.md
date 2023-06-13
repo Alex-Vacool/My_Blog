@@ -51,3 +51,16 @@ http://127.0.0.1:8000/
 ```
 ## Установка веб-сервиса (Linux)
  - Подключиться по ssh (putty, ssh)
+ - Перекинуть файлы проекта (ftp, git)
+ - Настроить службу ftp на сервере: 
+ ```curl 
+sudo apt update
+ ```
+  ```curl 
+sudo apt install vsftpd
+ ```
+   ```curl 
+service vsftpd status
+ ```
+ 
+
