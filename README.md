@@ -108,7 +108,7 @@ gunicorn my_blog.wsgi
  ```curl 
 sudo nano /etc/systemd/system/gunicorn.service
  ```
-- текст файла
+- Текст файла
  ```curl 
 [Unit]
 Description=gunicorn daemon
