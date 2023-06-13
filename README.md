@@ -79,6 +79,15 @@ Ctrl+X - закрыть
  - Подключиться с помощью WinSCP
  - Скоптровать файлы в каталог /home/ubuntu - (пример для Ubuntu Server)
  - Даем права 755 (Чтение и выполнение)
+ - Создать python-окружение для проекта
+ ```curl 
+python3 -V - текущая версия
+ ```curl 
+sudo apt install python3-venv
+ ```
+
+python3 -m venv django2 
+source django2/bin/activate
 
 
 
