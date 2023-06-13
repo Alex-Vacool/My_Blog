@@ -5,7 +5,7 @@
 
 #### Шаблон сайта взят с [https://startbootstrap.com/theme/clean-blog](https://startbootstrap.com/theme/clean-blog)
 #### Диаграмма прецидентов системы представлена на рисунке
-![Alt-текст](https://github.com/Alex-Vacool/Nginx-Docker/blob/main/%D0%94%D0%97_%D0%9F%D0%B8%D1%82%D0%BE%D0%BD.png)
+![Alt-текст](ДЗ_Питон.png)
 ## Оглавление
 
 1. [Требования к операционной системе](#Требования-к-операционной-системе)
