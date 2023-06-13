@@ -110,6 +110,7 @@ sudo nano /etc/systemd/system/gunicorn.service
  ```
 - текст файла
 --------------------------------------
+ ```curl 
 [Unit]
 Description=gunicorn daemon
 After=network.target
@@ -122,6 +123,7 @@ ExecStart=/home/ubuntu/my_blog/django2/bin/gunicorn --access-logfile - --workers
 
 [Install]
 WantedBy=multi-user.target
------------------------------------------
+ ```
+
 
 
