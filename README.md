@@ -186,7 +186,12 @@ ifconfig - http://172.X.X.X
 меню "Регистрация"
 ```
  ## Применение SSH на сервере Linux
-
-
-
+ - Убедиться, что версия snapd обновлена
+```curl 
+sudo snap install core; sudo snap refresh core
+```
+ - Установить Certbot
+```curl 
+sudo snap install --classic certbot
+```
 
