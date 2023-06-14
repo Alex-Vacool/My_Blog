@@ -203,10 +203,15 @@ sudo ln -s /snap/bin/certbot /usr/bin/certbot
 sudo certbot certonly --nginx
 ```
  - Протетировать автоматического продление
-```curl 
-sudo certbot renew --dry-run
-```
  - Команда обновления certbot устанавливается в одном из следующих расположений:
+ ```curl 
 /etc/crontab/
 /etc/cron.*/*
 systemctl list-timers
+```
+ - Подтвердить работу Certbot
+```curl 
+Чтобы убедиться, что ваш сайт правильно настроен, посетите https://yourwebsite.com/ в браузере и найдите значок блокировки на панели URL-адресов.
+
+```
+
