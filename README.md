@@ -194,4 +194,19 @@ sudo snap install core; sudo snap refresh core
 ```curl 
 sudo snap install --classic certbot
 ```
-
+ - Подготовка Certbot
+```curl 
+sudo ln -s /snap/bin/certbot /usr/bin/certbot
+```
+ - Получить сертификат
+```curl 
+sudo certbot certonly --nginx
+```
+ - Протетировать автоматического продление
+```curl 
+sudo certbot renew --dry-run
+```
+ - Команда обновления certbot устанавливается в одном из следующих расположений:
+/etc/crontab/
+/etc/cron.*/*
+systemctl list-timers
